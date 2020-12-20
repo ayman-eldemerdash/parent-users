@@ -1,1 +1,27 @@
-/* You can add global styles to this file, and also import other style files */
+/* can't find the exact font */
+
+/* @font-face {
+  font-family: "SF NS Display";
+  src: local("SF NS Display"), url(./assets/fonts/SFNS_Display_Regular.ttf) format("truetype");
+}
+
+*{
+  font-family: "SF NS Display", Arial, Helvetica, sans-serif;
+} */
+
+
+.parent-btn {
+  height: 40px !important;
+  padding: 0 25px !important;
+  color: #ffffff !important;
+  border-radius: 20px !important;
+  background-color: #8e44ad !important;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2) !important;
+  text-transform: uppercase !important;
+  font-weight: 100 !important;
+  transition: 0.3s linear;
+}
+
+.parent-btn:hover {
+  background-color: #793197 !important;
+}

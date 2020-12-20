@@ -1,0 +1,42 @@
+.navbar {
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.navbar-brand img {
+  content: url("../../../../assets/images/Logo.png");
+  width: 120px;
+  height: 40px;
+}
+
+.nav-link {
+  cursor: pointer;
+  color: #34495e;
+  font-size: 15px;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  transition: 0.3s linear;
+  padding: 8px 5px;
+  float: left;
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-link:hover {
+  color: #8e44ad;
+}
+
+.nav-link::after {
+  background-color: #8e44ad;
+  content: "";
+  width: 0;
+  height: 3px;
+  left: 0;
+  bottom: 0;
+  transition: width 0.35s ease 0s;
+  position: absolute;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
