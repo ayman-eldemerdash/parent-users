@@ -9,6 +9,9 @@
   font-family: "SF NS Display", Arial, Helvetica, sans-serif;
 } */
 
+* {
+  outline: unset;
+}
 
 .parent-btn {
   height: 40px !important;
