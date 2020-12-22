@@ -1,1 +1,10 @@
-<p>dashboard works!</p>
+<div class="dashboard-container col-12 mx-auto p-0">
+  <div class="row mx-0">
+    <div class="col my-2 ml-3 mr-3 pr-2 list-container" infiniteScroll [infiniteScrollDistance]="1"
+      [infiniteScrollThrottle]="50" [scrollWindow]="false" (scrolled)="getMoreUsers()">
+      <app-users-list [users]="users"></app-users-list>
+      <app-loading *ngIf="loading"></app-loading>
+    </div>
+    <div class="col-3 p-0 details-container"></div>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+<div class="tr row mx-0 my-2">
+  <div class="td" style="width: 80%;">
+    <div class="row mx-0 align-items-center">
+      <div class="profile-photo d-inline-block mr-2">
+        <img [src]="user?.avatar" width="100%" height="100%">
+      </div>
+      <div class="username">
+        {{user?.first_name}} {{user?.last_name}}
+      </div>
+    </div>
+  </div>
+
+  <div class="td" style="width: 20%;">
+    <div class="row mx-0 align-items-center" style="height: 100%;">
+      <button class="btn action-btn mr-2">
+        <img src="../../../../../../assets/images/edit.svg">
+      </button>
+      <button class="btn action-btn ml-1">
+        <img src="../../../../../../assets/images/delete.svg">
+      </button>
+      <button class="ml-auto btn p-0">
+        <img src="../../../../../../assets/images/right-arrow2.svg" width="12px" style="margin-bottom: 2px;">
+      </button>
+    </div>
+  </div>
+</div>

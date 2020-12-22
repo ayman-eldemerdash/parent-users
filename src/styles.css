@@ -13,6 +13,10 @@
   outline: unset;
 }
 
+.btn {
+  box-shadow: unset !important;
+}
+
 .parent-btn {
   height: 40px !important;
   padding: 0 25px !important;
@@ -27,4 +31,18 @@
 
 .parent-btn:hover {
   background-color: #793197 !important;
+}
+
+.action-btn {
+  border: 2px solid #8e44ad !important;
+  width: 35px;
+  height: 35px;
+  padding: 8px !important;
+  background-color: #ffffff !important;
+  transition: 0.3s !important;
+  line-height: 50% !important;
+}
+
+.action-btn:hover {
+  background-color: #8e44ad0d !important;
 }
