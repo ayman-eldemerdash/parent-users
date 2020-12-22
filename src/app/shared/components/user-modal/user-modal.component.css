@@ -1,0 +1,31 @@
+.profile-picture {
+  width: 105px;
+  height: 105px;
+  border-radius: 50%;
+  border: 3px solid #ffffff;
+  margin-top: -65px;
+  margin-bottom: 10px;
+}
+
+.profile-picture img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+input {
+  height: 35px;
+  font-size: 15px;
+  color: #34495E;
+}
+
+input:focus{
+  border-color: unset !important;
+  box-shadow: unset !important;
+}
+
+label {
+  font-size: 14px;
+  color: #7F8C8D;
+  margin-bottom: 5px;
+}

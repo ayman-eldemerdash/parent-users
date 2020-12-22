@@ -1,25 +1,28 @@
-<div class="tr row mx-0 my-2">
-  <div class="td" style="width: 80%;">
+<div class="tr row mx-0 my-2" [ngClass]="{'active': user?.id === selectedUser?.id}">
+  <div class="td" [ngStyle]="{'width': selectedUser? '80%' : '85%'}">
     <div class="row mx-0 align-items-center">
-      <div class="profile-photo d-inline-block mr-2">
+      <div class="profile-photo d-inline-block mr-2" [ngStyle]="{'border': user?.id === selectedUser?.id ? '2px solid #FFFFFF' : 'unset'}">
         <img [src]="user?.avatar" width="100%" height="100%">
       </div>
-      <div class="username">
-        {{user?.first_name}} {{user?.last_name}}
+      <div class="username" [ngStyle]="{'color': user?.id === selectedUser?.id ? '#FFFFFF' : '#34495E'}">
+        {{user?.name}}
       </div>
     </div>
   </div>
 
-  <div class="td" style="width: 20%;">
+  <div class="td" [ngStyle]="{'width': selectedUser? '20%' : '15%'}">
     <div class="row mx-0 align-items-center" style="height: 100%;">
-      <button class="btn action-btn mr-2">
-        <img src="../../../../../../assets/images/edit.svg">
+      <button class="btn action-btn mr-2" *ngIf="user?.id !== selectedUser?.id" (click)="emitUserEdit($event)">
+        <img src="../../../../../../assets/icons/edit.svg">
       </button>
-      <button class="btn action-btn ml-1">
-        <img src="../../../../../../assets/images/delete.svg">
+      <button class="btn action-btn ml-1" *ngIf="user?.id !== selectedUser?.id" (click)="emitUserDelete($event)">
+        <img src="../../../../../../assets/icons/delete.svg">
       </button>
-      <button class="ml-auto btn p-0">
-        <img src="../../../../../../assets/images/right-arrow2.svg" width="12px" style="margin-bottom: 2px;">
+      <button class="ml-auto btn p-0" *ngIf="user?.id !== selectedUser?.id">
+        <img src="../../../../../../assets/icons/right-arrow2.svg" width="12px" style="margin-bottom: 2px;">
+      </button>
+      <button class="ml-auto btn p-0" *ngIf="user?.id === selectedUser?.id">
+        <img src="../../../../../../assets/icons/right-arrow2-white.svg" width="12px" style="margin-bottom: 2px;">
       </button>
     </div>
   </div>

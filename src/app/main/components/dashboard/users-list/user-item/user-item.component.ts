@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { User } from 'src/app/core/models/user.model';
 
 @Component({
@@ -6,13 +6,21 @@ import { User } from 'src/app/core/models/user.model';
   templateUrl: './user-item.component.html',
   styleUrls: ['./user-item.component.css']
 })
-export class UserItemComponent implements OnInit {
+export class UserItemComponent {
 
   @Input() user: User;
+  @Input() selectedUser: User;
+  @Output() editEmitter = new EventEmitter();
+  @Output() deleteEmitter = new EventEmitter();
 
-  constructor() { }
+  emitUserEdit(e: Event): void {
+    e.stopPropagation();
+    this.editEmitter.emit(this.user);
+  }
 
-  ngOnInit(): void {
+  emitUserDelete(e: Event): void {
+    e.stopPropagation();
+    this.deleteEmitter.emit(this.user);
   }
 
 }

@@ -1,0 +1,21 @@
+<div class="modal-body">
+  <div class="mb-3 text-center">
+    <label for="name">Are you sure you want to delete</label>
+    <p class="mt-2">{{user?.name}}</p>
+  </div>
+
+  <div class="row mx-0 mt-4 justify-content-center">
+    <button class="btn secondary-btn mr-2" (click)="modal.close()" style="width: 48%;">
+      No
+    </button>
+    <button class="btn primary-btn" (click)="loading=true; deleteEmitter.emit()"
+      style="width: 48%;">
+      <div class="d-flex justify-content-center align-items-center" *ngIf="loading">
+        <app-btn-loading></app-btn-loading>
+      </div>
+      <span *ngIf="!loading">
+        Yes
+      </span>
+    </button>
+  </div>
+</div>

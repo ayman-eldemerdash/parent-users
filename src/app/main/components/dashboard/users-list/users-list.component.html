@@ -1,14 +1,22 @@
 <table class="table">
   <thead>
     <tr>
-      <th scope="col" style="width: 80%;">User</th>
+      <th scope="col" [ngStyle]="{'width': selectedUser? '80%' : '85%'}">User</th>
       <th scope="col">Actions</th>
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let user of users; let last = last" [ngStyle]="{'border-bottom': !last? '1px solid #DEDEDE':'unset'}">
+    <tr
+      *ngFor="let user of users; let last = last"
+      (click)="emitSelectedUser(user)"
+      [ngStyle]="{'border-bottom': !last? '1px solid #DEDEDE':'unset'}">
       <td colspan="2" style="padding: 0;">
-        <app-user-item [user]="user"></app-user-item>
+        <app-user-item
+          [user]="user"
+          [selectedUser]="selectedUser"
+          (editEmitter)="editEmitter.emit($event)"
+          (deleteEmitter)="deleteEmitter.emit($event)">
+        </app-user-item>
       </td>
     </tr>
   </tbody>

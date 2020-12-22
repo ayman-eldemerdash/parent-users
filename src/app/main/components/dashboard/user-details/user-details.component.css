@@ -1,0 +1,18 @@
+.profile-picture {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background-color: #dedede;
+}
+
+.close {
+  width: 12px;
+  height: 12px;
+  cursor: pointer;
+}
+
+.username {
+  font-size: 25px;
+  cursor: default;
+  color: #34495E;
+}

@@ -1,0 +1,11 @@
+label {
+  font-size: 14px;
+  color: #7F8C8D;
+  margin-bottom: 5px;
+}
+
+p {
+  color: #34495E;
+  font-size: 15px;
+  cursor: default;
+}

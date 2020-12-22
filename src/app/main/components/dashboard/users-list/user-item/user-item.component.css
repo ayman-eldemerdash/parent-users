@@ -14,6 +14,14 @@
   border-radius: 10px;
 }
 
+.active {
+  background-color: #8e44ad;
+}
+
+.active:hover {
+  background-color: #8e44ad;
+}
+
 .profile-photo {
   width: 55px;
   height: 55px;

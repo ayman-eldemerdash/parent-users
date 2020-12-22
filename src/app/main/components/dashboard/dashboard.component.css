@@ -14,14 +14,14 @@
 
 .details-container {
   height: 80vh;
+  width: 280px;
   background-color: #F5F5F5;
   box-shadow: -2px 0 4px 0 rgba(0,0,0,0.2);
   border-radius: 0 10px 10px 0;
 }
 
 ::-webkit-scrollbar {
-  width: 5px;
-  height: 5px;
+  width: 3px;
 }
 
 ::-webkit-scrollbar-track {
@@ -35,5 +35,5 @@
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #00000033;
+  background-color: #00000066;
 }

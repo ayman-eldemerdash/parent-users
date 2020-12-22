@@ -25,12 +25,41 @@
   background-color: #8e44ad !important;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2) !important;
   text-transform: uppercase !important;
+  font-size: 15px !important;
   font-weight: 100 !important;
   transition: 0.3s linear;
 }
 
-.parent-btn:hover {
+.parent-btn:hover,
+.primary-btn:hover {
   background-color: #793197 !important;
+}
+
+.primary-btn {
+  height: 40px !important;
+  width: 110px;
+  color: #ffffff !important;
+  border-radius: 20px !important;
+  background-color: #8e44ad !important;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2) !important;
+  transition: 0.3s linear;
+  font-size: 15px !important;
+}
+
+.secondary-btn {
+  height: 40px !important;
+  width: 110px;
+  color: #8e44ad !important;
+  border: 1px solid #8e44ad !important;
+  border-radius: 20px !important;
+  background-color: #f5f5f5 !important;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2) !important;
+  transition: 0.3s linear;
+  font-size: 15px !important;
+}
+
+.secondary-btn:hover {
+  background-color: #f0f0f0 !important;
 }
 
 .action-btn {
@@ -45,4 +74,13 @@
 
 .action-btn:hover {
   background-color: #8e44ad0d !important;
+}
+
+.modal-dialog {
+  width: 365px !important;
+}
+
+.modal-content {
+  border: unset !important;
+  border-radius: 10px !important;
 }

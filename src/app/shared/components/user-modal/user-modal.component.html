@@ -1,0 +1,39 @@
+<div class="modal-body">
+  <div class="profile-picture mx-auto">
+    <img [src]="user.avatar? user?.avatar : '../../../../assets/icons/user.svg'">
+  </div>
+
+  <div class="mb-3">
+    <label for="name">Name</label>
+    <input id="name" type="text" class="form-control" [value]="userOnFly.name"
+      (input)="userOnFly.name = $event.target.value" placeholder="Name...">
+  </div>
+
+  <div>
+    <label for="job-title">Job title</label>
+    <input id="job-title" type="text" class="form-control" [value]="userOnFly.job"
+      (input)="userOnFly.job = $event.target.value" placeholder="Job title...">
+  </div>
+
+  <div class="row mx-0 mt-4 justify-content-center">
+    <button class="btn secondary-btn mr-2" (click)="modal.close()" style="width: 48%;">
+      Cancel
+    </button>
+    <button class="btn primary-btn" *ngIf="!user" (click)="loading=true; addEmitter.emit(userOnFly)" style="width: 48%;">
+      <div class="d-flex justify-content-center align-items-center" *ngIf="loading">
+        <app-btn-loading></app-btn-loading>
+      </div>
+      <span *ngIf="!loading">
+        Add
+      </span>
+    </button>
+    <button class="btn primary-btn" *ngIf="user" (click)="loading=true; editEmitter.emit(userOnFly)" style="width: 48%;">
+      <div class="d-flex justify-content-center align-items-center" *ngIf="loading">
+        <app-btn-loading></app-btn-loading>
+      </div>
+      <span *ngIf="!loading">
+        Save
+      </span>
+    </button>
+  </div>
+</div>
