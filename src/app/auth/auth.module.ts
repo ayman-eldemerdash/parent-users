@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { SharedModule } from './../shared/shared.module';
 import { LoginComponent } from './components/login/login.component';
 
@@ -8,6 +9,7 @@ import { LoginComponent } from './components/login/login.component';
   ],
   imports: [
     SharedModule,
+    FormsModule,
   ]
 })
 export class AuthModule { }

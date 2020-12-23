@@ -12,7 +12,8 @@
         <p class="nav-link">contact</p>
       </li>
       <li class="nav-item ml-3">
-        <button class="btn parent-btn" [routerLink]="['/login']">login</button>
+        <button class="btn parent-btn" *ngIf="!authService.token" [routerLink]="['/login']">login</button>
+        <button class="btn parent-btn" *ngIf="authService.token">enquire</button>
       </li>
     </ul>
   </div>

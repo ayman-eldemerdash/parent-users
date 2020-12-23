@@ -35,6 +35,7 @@ export class DashboardComponent implements OnInit, OnDestroy {
   getUsers(): void {
     if (this.userService.users) {
       this.users = this.userService.users;
+      this.loading = false;
     } else {
       this.userService.storeUsers();
       this.userService.users$.subscribe({
