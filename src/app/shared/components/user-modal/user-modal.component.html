@@ -1,6 +1,7 @@
 <div class="modal-body">
-  <div class="profile-picture mx-auto">
-    <img [src]="user.avatar? user?.avatar : '../../../../assets/icons/user.svg'">
+  <div class="profile-picture mx-auto d-flex justify-content-center align-items-center">
+    <img *ngIf="user?.avatar" [src]="user.avatar">
+    <img *ngIf="!user?.avatar" src="../../../../assets/icons/user.svg" style="width: 30px; height: 30px;">
   </div>
 
   <div class="mb-3">
@@ -19,7 +20,8 @@
     <button class="btn secondary-btn mr-2" (click)="modal.close()" style="width: 48%;">
       Cancel
     </button>
-    <button class="btn primary-btn" *ngIf="!user" (click)="loading=true; addEmitter.emit(userOnFly)" style="width: 48%;">
+    <button class="btn primary-btn" *ngIf="!user" (click)="loading=true; addEmitter.emit(userOnFly)"
+      style="width: 48%;" [disabled]="!userOnFly.name">
       <div class="d-flex justify-content-center align-items-center" *ngIf="loading">
         <app-btn-loading></app-btn-loading>
       </div>
@@ -27,7 +29,8 @@
         Add
       </span>
     </button>
-    <button class="btn primary-btn" *ngIf="user" (click)="loading=true; editEmitter.emit(userOnFly)" style="width: 48%;">
+    <button class="btn primary-btn" *ngIf="user" (click)="loading=true; editEmitter.emit(userOnFly)"
+      style="width: 48%;" [disabled]="!userOnFly.name">
       <div class="d-flex justify-content-center align-items-center" *ngIf="loading">
         <app-btn-loading></app-btn-loading>
       </div>

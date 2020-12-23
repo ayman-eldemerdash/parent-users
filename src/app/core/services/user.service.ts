@@ -59,7 +59,7 @@ export class UserService {
     );
   }
 
-  createUseR(user: User): Observable<any> {
+  createUser(user: User): Observable<any> {
     return this.http.post<any>(`${this.baseUrl}`, user);
   }
 

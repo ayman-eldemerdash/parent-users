@@ -26,7 +26,7 @@
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2) !important;
   text-transform: uppercase !important;
   font-size: 15px !important;
-  font-weight: 100 !important;
+  /* font-weight: 100 !important; */
   transition: 0.3s linear;
 }
 
@@ -83,4 +83,16 @@
 .modal-content {
   border: unset !important;
   border-radius: 10px !important;
+}
+
+input {
+  height: 35px !important;
+  font-size: 15px !important;
+  color: #34495E !important;
+}
+
+input:focus{
+  border-width: 1px;
+  border-color: #8E44AD !important;
+  box-shadow: unset !important;
 }

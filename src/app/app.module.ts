@@ -11,11 +11,13 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './core/components/navbar/navbar.component';
+import { TitleBarComponent } from './core/components/title-bar/title-bar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent
+    NavbarComponent,
+    TitleBarComponent,
   ],
   imports: [
     FormsModule,

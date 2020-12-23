@@ -63,7 +63,10 @@ export class DashboardComponent implements OnInit, OnDestroy {
     this.selectedUser = null;
     this.userService.getUserDetails(user.id).subscribe(
       (res: User) => this.selectedUser = res,
-      (err: HttpErrorResponse) => this.toastrService.error('Something went wrong')
+      (err: HttpErrorResponse) => {
+        this.showDetailsPanel = false;
+        this.toastrService.error('Something went wrong');
+      }
     );
   }
 
