@@ -3,8 +3,8 @@ import { SharedModule } from '../shared/shared.module';
 import { HomeComponent } from './components/home/home.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { UsersListComponent } from './components/dashboard/users-list/users-list.component';
-import { UserItemComponent } from './components/dashboard/users-list/user-item/user-item.component';
 import { UserDetailsComponent } from './components/dashboard/user-details/user-details.component';
+import { UserItemComponent } from './components/dashboard/users-list/user-item/user-item.component';
 
 @NgModule({
   declarations: [

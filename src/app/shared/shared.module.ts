@@ -5,8 +5,8 @@ import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import { ToastrModule } from 'ngx-toastr';
 import { LoadingComponent } from './components/loading/loading.component';
 import { UserModalComponent } from './components/user-modal/user-modal.component';
-import { DeleteModalComponent } from './components/delete-modal/delete-modal.component';
 import { BtnLoadingComponent } from './components/btn-loading/btn-loading.component';
+import { DeleteModalComponent } from './components/delete-modal/delete-modal.component';
 
 @NgModule({
   declarations: [

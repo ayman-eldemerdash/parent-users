@@ -20,6 +20,7 @@
     <button class="btn secondary-btn mr-2" (click)="modal.close()" style="width: 48%;">
       Cancel
     </button>
+
     <button class="btn primary-btn" *ngIf="!user" (click)="loading=true; addEmitter.emit(userOnFly)"
       style="width: 48%;" [disabled]="!userOnFly.name">
       <div class="d-flex justify-content-center align-items-center" *ngIf="loading">
@@ -29,6 +30,7 @@
         Add
       </span>
     </button>
+
     <button class="btn primary-btn" *ngIf="user" (click)="loading=true; editEmitter.emit(userOnFly)"
       style="width: 48%;" [disabled]="!userOnFly.name">
       <div class="d-flex justify-content-center align-items-center" *ngIf="loading">

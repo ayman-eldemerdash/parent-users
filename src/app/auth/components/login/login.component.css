@@ -1,20 +1,15 @@
-.login-container {
+.login-backdrop {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.login {
+.login-container {
   height: 575px;
   width: 767px;
   border-radius: 10px;
   background-color: #ffffff;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
-}
-
-.login-img {
-  content: url("../../../../assets/images/login-bg.png");
-  width: 100%;
 }
 
 .login-texts h4 {
@@ -33,7 +28,7 @@
   font-weight: 500;
 }
 
-form label {
+.login-form label {
   font-size: 14px;
   color: #7f8c8d;
   margin-bottom: 5px;
@@ -50,21 +45,3 @@ form label {
   text-decoration: underline;
 }
 
-::placeholder {
-  /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: #7f8c8d;
-  font-size: 14px;
-  opacity: 1; /* Firefox */
-}
-
-:-ms-input-placeholder {
-  /* Internet Explorer 10-11 */
-  color: #7f8c8d;
-  font-size: 14px;
-}
-
-::-ms-input-placeholder {
-  /* Microsoft Edge */
-  color: #7f8c8d;
-  font-size: 14px;
-}

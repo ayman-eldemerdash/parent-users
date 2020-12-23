@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { User } from '../models/user.model';
+import { USERS_URL } from '../constants/constants';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +14,6 @@ export class UserService {
   pageNumber = 1;
   totalPages: number;
   users$ = new Subject();
-  baseUrl = 'https://reqres.in/api/users';
 
   constructor(
     private http: HttpClient,
@@ -22,7 +22,7 @@ export class UserService {
   getUsers(): Observable<any> {
     let params = new HttpParams();
     params = params.set('page', this.pageNumber.toString());
-    return this.http.get<any>(`${this.baseUrl}`, { params }).pipe(
+    return this.http.get<any>(USERS_URL, { params }).pipe(
       map(
         (res) => ({
           total_pages: res.total_pages,
@@ -49,7 +49,7 @@ export class UserService {
   }
 
   getUserDetails(userId: number): Observable<any> {
-    return this.http.get<any>(`${this.baseUrl}/${userId}`).pipe(
+    return this.http.get<any>(`${USERS_URL}/${userId}`).pipe(
       map((res: any) => ({
         id: res.data.id,
         avatar: res.data.avatar,
@@ -60,15 +60,15 @@ export class UserService {
   }
 
   createUser(user: User): Observable<any> {
-    return this.http.post<any>(`${this.baseUrl}`, user);
+    return this.http.post<any>(USERS_URL, user);
   }
 
   editUser(user: User): Observable<any> {
-    return this.http.put<any>(`${this.baseUrl}`, user);
+    return this.http.put<any>(USERS_URL, user);
   }
 
   deleteUser(userId: number): Observable<any> {
-    return this.http.get<any>(`${this.baseUrl}/${userId}`);
+    return this.http.get<any>(`${USERS_URL}/${userId}`);
   }
 
 }

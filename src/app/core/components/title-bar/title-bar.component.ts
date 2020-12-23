@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { ToastrService } from 'ngx-toastr';
 import { Subscription } from 'rxjs';
@@ -11,7 +11,7 @@ import { UserService } from '../../services/user.service';
   templateUrl: './title-bar.component.html',
   styleUrls: ['./title-bar.component.css']
 })
-export class TitleBarComponent implements OnInit {
+export class TitleBarComponent {
 
   subscriptions = new Subscription();
 
@@ -20,9 +20,6 @@ export class TitleBarComponent implements OnInit {
     private userService: UserService,
     private toastrService: ToastrService,
   ) { }
-
-  ngOnInit(): void {
-  }
 
   onAddUser(): void {
     const USER_MODAL = this.modalService.open(UserModalComponent, { centered: true });
