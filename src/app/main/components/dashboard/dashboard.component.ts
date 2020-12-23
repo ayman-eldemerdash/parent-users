@@ -38,16 +38,18 @@ export class DashboardComponent implements OnInit, OnDestroy {
       this.loading = false;
     } else {
       this.userService.storeUsers();
-      this.userService.users$.subscribe({
-        next: () => {
-          this.users = this.userService.users;
-          this.loading = false;
-        },
-        error: () => {
-          this.loading = false;
-          this.toastrService.error('Something went wrong');
-        }
-      });
+      this.subscriptions.add(
+        this.userService.users$.subscribe({
+          next: () => {
+            this.users = this.userService.users;
+            this.loading = false;
+          },
+          error: () => {
+            this.loading = false;
+            this.toastrService.error('Something went wrong');
+          }
+        })
+      );
     }
   }
 
