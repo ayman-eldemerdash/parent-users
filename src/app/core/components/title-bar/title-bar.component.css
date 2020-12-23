@@ -4,18 +4,6 @@
   box-shadow: 0 2px 4px 0 #00000033;
 }
 
-.breadcrumb {
-  background-color: unset;
-  font-size: 12px;
-  padding: 0.75rem 0;
-  margin: 0;
-}
-
-.breadcrumb a {
-  color: #8e44ad;
-  font-weight: 500;
-}
-
 h1{
   color: #34495E;
   font-size: 30px;

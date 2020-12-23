@@ -1,6 +1,7 @@
-<app-navbar></app-navbar>
+<app-navbar *ngIf="showElement('navbar')"></app-navbar>
+
 <div class="parent-container">
-  <app-title-bar></app-title-bar>
+  <app-title-bar [ngClass]="{'d-none': !showElement('title-bar')}"></app-title-bar>
   <div class="container px-0 mt-4 pt-1">
     <router-outlet></router-outlet>
   </div>

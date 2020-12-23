@@ -15,13 +15,15 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        component: HomeComponent
+        component: HomeComponent,
       },
       {
         path: 'dashboard',
-        component: DashboardComponent
+        component: DashboardComponent,
+        data: { breadcrumb: 'Dashboard' }
       }
-    ]
+    ],
+    data: { breadcrumb: 'Home' }
   },
   {
     path: '',
